@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,900&display=swap');
+
+
+.header {
+  background-color: rgb(17, 17, 141);
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position:fixed;
+  top:0;
+  left: 0;
+  z-index:100;
+}
+
+.footer {
+  background-color:  rgb(17, 17, 141);
+  width: 100vw;
+  color: white;
+  height: 100px;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  left: 0;
+  z-index:8;
+}
+
+.footer > div:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  filter: drop-shadow(0 0 0.75rem black);
+}
+
+body {
+  display: flex;
+  flex-direction: column; 
+  z-index: 1;
+  /* position:unset; */
+}
+
+.header_logo {
+  max-width: 280px;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  overflow: hidden;
+  padding-left: 40px;
+}
+
+.header_logo:hover {
+   cursor: pointer;
+   transform: scale(1.1); 
+   filter: drop-shadow(0 0 0.75rem black);
+}
+
+.nav_options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 40px;
+  font-family: 'Lato', sans-serif;}
+
+
+
+#software-nav {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+
+
+}
+#software-nav:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  filter: drop-shadow(0 0 0.75rem black);
+
+}
+
+#industry-nav {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+#industry-nav:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+  filter: drop-shadow(0 0 0.75rem black);
+
+}
+
+#company-nav {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+}
+
+#company-nav:hover {
+  cursor: pointer;
+  transform: scale(1.1); 
+     filter: drop-shadow(0 0 0.75rem black);
+
+}
+
+.video {
+  position: relative;  
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  /* object-fit: none; */
+  filter:grayscale(100%);
+
+  
+
+  
+
+}
+
+#myVideo {
+  /* position: relative; */
+  /* top: 92px; */
+  justify-content: center;
+  z-index: 1;
+
+
+
+
+}
+
+.video_logo {
+  position: absolute;
+  top: 380px;
+  opacity: 50%;
+
+  max-width: 555px;
+  justify-content: center;
+  height: auto;
+  z-index: 10000;
+}
+
+
+.video_logo:hover ~ .typewriter {
+  position: absolute;
+  top: 420px;
+
+  max-width: 555px;
+  justify-content: center;
+  height: auto;
+  z-index: 500;
+}
+
+
+.video_logo:hover ~ .typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  color: white;
+
+
+  animation: 
+    typing 2.8s steps(25, end),
+    blink-caret 1s step-end infinite;
+    z-index: 500;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
+.video_logo:hover{
+  cursor: pointer;
+  opacity: 0%; }
+
+.video_logo:hover ~ #myVideo {
+  filter: blur(3px);
+
+
+
+}
+
+.grid{
+  position: relative;
+  display: grid;
+  /* position: inherit;   */
+  grid-template-areas: "health agriculture transport manufacturing"
+                        "fashion entertainment advertising finance";
+  grid-template-rows: 50fr 50fr;
+  grid-template-columns: 25fr 25fr 25fr 25fr;
+  margin-top: 23px;;
+  justify-content: space-between;
+  background-color:white;
+  height: 300px;
+  width: 100vw;
+  /* top: 820px; */
+  /* position: absolute; */
+}
+
+.grid > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 35px;
+  color: white;}
+
+
+
+
+
+.grid > .finance {
+  grid-area: finance;
+  background:url("finance.jpg");
+  background-position: center;
+  background-size: 290px;
+ 
+
+  
+} 
+
+.finance:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+
+}
+
+.grid > .healthcare {
+  grid-area: health;
+  background: url("health-tech-data.jpg");
+  background-position: center;
+  background-size: cover;
+   
+} 
+
+.healthcare:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+}
+
+.grid > .agriculture {
+  grid-area: agriculture;
+  background: url("agriculture_image-THUMBNAIL.jpg");
+  background-position: center;
+  background-size: cover;
+
+
+
+
+} 
+
+.agriculture:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+
+
+}
+.grid > .fashion{
+  grid-area: fashion;
+  background:url("fashion.jpg");
+  background-position: top;
+  background-size: cover;
+  
+
+} 
+
+.fashion:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+  background-position: -100% 0;
+
+
+}
+.grid > .transport {
+  grid-area: transport;
+  background:url("transport.jpg");
+  background-position: center;
+  background-size: cover;
+
+ 
+
+} 
+
+.transport:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+
+}
+.grid > .manufacturing {
+  grid-area: manufacturing;
+  background:url("ManufacturingTechnology_Odete-Passingham_2014.jpg");
+  background-position: center;
+  background-size: cover;
+ 
+  
+
+} 
+
+.manufacturing:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+
+}
+.grid > .advertising {
+  grid-area: advertising;
+  background:url("adver.png");
+  background-position: top;
+  background-size: cover;
+
+ 
+
+} 
+
+.advertising:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+}
+.grid > .entertainment {
+  grid-area: entertainment;
+  background:url("entertainment1.jpg");
+  background-position: center;
+  background-size: cover;
+
+} 
+
+.entertainment:hover {
+  background: white;
+  color:  rgb(17, 17, 141);
+
+
+}
